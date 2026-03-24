@@ -43,6 +43,8 @@ class Book(models.Model):
     status = models.CharField(
         max_length=16, choices=BookStatus.choices, default=BookStatus.AVAILABLE
     )
+    image = models.URLField(blank=True, null=True)
+    status = models.CharField(choices=BookStatus.choices, default=BookStatus.AVAILABLE)
     share = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
